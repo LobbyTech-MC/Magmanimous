@@ -1,0 +1,9 @@
+name: Magmanimous
+author: NCBPFluffyBear
+description: A Slimefun4 addon that adds more functionalities to the nether
+main: io.ncbpfluffybear.magmanimous.Magmanimous
+website: https://github.com/NCBPFluffyBear/Magmanimous
+version: ${project.version}
+api-version: 1.18
+depend:
+  - Slimefun
