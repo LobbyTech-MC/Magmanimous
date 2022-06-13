@@ -49,7 +49,7 @@ public class PortalStar extends SimpleSlimefunItem<ItemUseHandler> implements No
                 if (p.isSneaking()) {
                     World.Environment env = e.getPlayer().getWorld().getEnvironment();
                     if (env != World.Environment.NORMAL && env != World.Environment.NETHER) {
-                        Utils.send(p, "&cYou can not set a teleport point in this world!");
+                        Utils.send(p, "&c您无法在此世界设置传送点!");
                         return;
                     }
 
@@ -62,15 +62,15 @@ public class PortalStar extends SimpleSlimefunItem<ItemUseHandler> implements No
                     );
                     // Update location in lore
                     List<String> lore = starMeta.getLore();
-                    lore.set(5, ChatColors.color("&eLinked to " + l.getBlockX() + ", " + l.getBlockY()
+                    lore.set(5, ChatColors.color("&e链接至" + l.getBlockX() + ", " + l.getBlockY()
                             + ", " + l.getBlockZ() + " @" + l.getWorld().getName())
                     );
                     starMeta.setLore(lore);
                     star.setItemMeta(starMeta);
 
-                    Utils.send(p, "&aTeleport point has been set.");
+                    Utils.send(p, "&a传送点已设置");
                 } else {
-                    Utils.send(p, "&eSneak and right click to set this star's teleportation point");
+                    Utils.send(p, "&eShift+右击 设置传送点");
                 }
             }
         };
