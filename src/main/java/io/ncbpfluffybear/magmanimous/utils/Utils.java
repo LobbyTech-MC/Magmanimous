@@ -31,7 +31,7 @@ public class Utils {
      * Sends message to targeted player with plugin prefix
      */
     public static void send(CommandSender s, String msg) {
-        s.sendMessage(ChatColors.color("&7[&cMagmanimous&7]&r " + msg));
+        s.sendMessage(ChatColors.color("&7[&c熔岩之息&7]&r " + msg));
     }
 
     /**
