@@ -28,7 +28,7 @@ public class MagmaItems {
             "NETHER_CATALYST",
             Material.MAGMA_CREAM,
             "&c地狱催化剂",
-            "&7用于提升 &4地狱锻造厂 &7的工作效率"
+            "&7用于开启 &4地狱锻造厂"
     );
 
     // Nether forge components
