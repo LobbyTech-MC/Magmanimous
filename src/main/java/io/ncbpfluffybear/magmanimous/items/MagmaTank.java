@@ -57,18 +57,18 @@ public class MagmaTank extends SlimefunItem {
 
                 // Require player to be holding a Magma Block
                 if (item.getType() != Material.MAGMA_BLOCK) {
-                    Utils.send(p, "&eThis tank currently has " + stored + " &eMagma Block(s). Right click with Magma Blocks to add more in.");
+                    Utils.send(p, "&e该岩浆罐已存有" + stored + "个&e岩浆块,右击岩浆块可以添加更多");
                     return;
                 }
 
                 if (SlimefunItem.getByItem(item) != null) {
-                    Utils.send(p, "&cYou can not use Slimefun Items here!");
+                    Utils.send(p, "&c您无法在此使用粘液科技物品!");
                     return;
                 }
 
                 // Check if already full
                 if (stored >= getMaxStorage()) {
-                    Utils.send(p, "&cThis tank already has the maximum number of Magma Blocks! (" + getMaxStorage() + "&c)");
+                    Utils.send(p, "&c该岩浆罐已到达储存上限! (" + getMaxStorage() + "&c)");
                     return;
                 }
 
@@ -89,7 +89,7 @@ public class MagmaTank extends SlimefunItem {
                 }
 
                 // Update stored amount
-                Utils.send(p, "&aThis tank now has " + stored + " &aMagma Block(s).");
+                Utils.send(p, "&a该岩浆罐现有" + stored + "个&a岩浆块");
                 BlockStorage.addBlockInfo(tank, "stored", String.valueOf(stored));
             }
         };
