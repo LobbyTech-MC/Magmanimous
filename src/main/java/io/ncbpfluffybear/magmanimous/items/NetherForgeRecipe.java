@@ -32,10 +32,10 @@ public class NetherForgeRecipe extends SlimefunItem {
             new NamespacedKey(Magmanimous.getInstance(), "nether_forge"),
             new CustomItemStack(
                     Material.POLISHED_BLACKSTONE_WALL,
-                    "&4Nether Forge",
-                    "&7Craft in a Nether Forge",
-                    "&eFind the Magmanimous Guide in the",
-                    "&eSlimefun Guide to learn about the Nether Forge"
+                    "&4地狱锻造厂",
+                    "&7在地狱锻造厂中合成该物品",
+                    "&e请查询熔岩之息指南以获取",
+                    "&e更多关于地狱锻造厂的信息"
             ));
 
     private static final Map<Material, Integer> attunements = new HashMap<>();
@@ -58,7 +58,7 @@ public class NetherForgeRecipe extends SlimefunItem {
         List<String> lore = catalystMeta.getLore();
 
         lore.add("");
-        lore.add(ChatColors.color("&eCost: " + cost + " &eMagma Blocks"));
+        lore.add(ChatColors.color("&e耗费: " + cost + "个&e岩浆块"));
 
         catalystMeta.setLore(lore);
         catalyst.setItemMeta(catalystMeta);
