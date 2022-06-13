@@ -23,16 +23,16 @@ import org.bukkit.inventory.ItemStack;
 public class MagmaItemSetup {
 
     public static final NamespacedKey magmaKey = new NamespacedKey(Magmanimous.getInstance(), "magmanimous_items");
-    public static final ItemGroup magmaCategory = new ItemGroup(magmaKey, new CustomItemStack(Material.MAGMA_BLOCK, "&cMagmanimous"));
+    public static final ItemGroup magmaCategory = new ItemGroup(magmaKey, new CustomItemStack(Material.MAGMA_BLOCK, "&c熔岩之息"));
 
     private static final RecipeType NETHER_MERCHANT = new RecipeType(
             new NamespacedKey(Magmanimous.getInstance(), "nether_merchant_barter"),
             new CustomItemStack(
                     Material.PIGLIN_SPAWN_EGG,
-                    "&cNether Merchant",
-                    "&7Barter with a Nether Merchant",
-                    "&eFind the Magmanimous Guide in the",
-                    "&eSlimefun Guide to learn about Nether Merchants"
+                    "&c地狱商人",
+                    "&7与地狱商人进行交易",
+                    "&e请查询熔岩之息指南",
+                    "&e以获取更多信息"
             ));
 
     public MagmaItemSetup() {
