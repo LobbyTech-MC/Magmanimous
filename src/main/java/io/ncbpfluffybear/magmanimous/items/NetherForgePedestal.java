@@ -131,13 +131,13 @@ public class NetherForgePedestal extends SlimefunItem {
         ItemStack item = dispenser.getInventory().getItem(0);
 
         if (item == null) {
-            Utils.send(p, "&cInsert an item into the pedestal first!");
+            Utils.send(p, "&c首先将一个物品插入基座!");
             return true;
         }
 
         // Block Slimefun and unsupported items
         if (item instanceof SlimefunItemStack) {
-            Utils.send(p, "&cSlimefun items can not be used in the forge!");
+            Utils.send(p, "&c无法在此使用粘液科技物品!");
             return true;
         }
 
@@ -147,18 +147,18 @@ public class NetherForgePedestal extends SlimefunItem {
         if (NetherForgeRecipe.getAttunements().containsKey(item.getType())) {
             attunement = true;
         } else if (!NetherForgeRecipe.getCrafts().containsKey(item.getType())) {
-            Utils.send(p, "&cThis item can not be used in the forge!");
+            Utils.send(p, "&c该物品无法被用于该锻造厂!");
             return true;
         }
 
         if (attunement && Utils.isAttuned(item)) {
-            Utils.send(p, "&cThis item is already attuned!");
+            Utils.send(p, "&c此物品已被调谐!");
             return true;
         }
 
         // Verify item has no non-default metadata
         if (!attunement && !SlimefunUtils.isItemSimilar(item, new ItemStack(item.getType()), true)) {
-            Utils.send(p, "&cYou can not craft using a modified item!");
+            Utils.send(p, "&c您不能使用修改过的物品作为合成材料!");
             return true;
         }
 
@@ -179,7 +179,7 @@ public class NetherForgePedestal extends SlimefunItem {
         }
 
         if (tankVol < cost) {
-            Utils.send(p, "&cThe attached Magma Tank has " + tankVol + " Magma Blocks but needs " + cost + " Magma Blocks!");
+            Utils.send(p, "&c附近的岩浆罐有" + tankVol + "个岩浆块，但是反应需要" + cost + "个岩浆块!");
             return true;
         }
 
@@ -201,7 +201,7 @@ public class NetherForgePedestal extends SlimefunItem {
         if (attunement) {
             ItemMeta meta = item.getItemMeta();
             List<String> lore = meta.hasLore() ? meta.getLore() : new ArrayList<>();
-            lore.add(ChatColors.color("&4Magma Attuned"));
+            lore.add(ChatColors.color("&4岩浆调谐"));
             meta.setLore(lore);
             item.setItemMeta(meta);
 
@@ -244,16 +244,16 @@ public class NetherForgePedestal extends SlimefunItem {
      */
     private boolean checkStructure(Block dispenser, Block magmaTank, Player p) {
         if (dispenser.getLocation().getWorld().getEnvironment() != World.Environment.NETHER) {
-            Utils.send(p, "&cThe Nether Forge can only be operated in the Nether!");
+            Utils.send(p, "&c地狱锻造厂仅能在地狱工作!");
             return false;
         }
 
         // Check for Magma Tank
         if (MagmaItems.MAGMA_TANK.getItem() != BlockStorage.check(magmaTank)) {
-            Utils.send(p, "&cThis Nether Forge is missing a Magma Tank at "
+            Utils.send(p, "&c地狱锻造厂缺少一个岩浆罐，位于"
                     + magmaTank.getX() + ", " + magmaTank.getY() + ", " + magmaTank.getZ()
             );
-            Utils.send(p, "&eYou can refer to this guide when building the Nether Forge: " + Strings.FORGE_GUIDE);
+            Utils.send(p, "&e你可以在建造地狱锻造厂时参考这个指南: " + Strings.FORGE_GUIDE);
             return false;
         }
 
@@ -261,10 +261,10 @@ public class NetherForgePedestal extends SlimefunItem {
         for (BlockFace face : STAIR_FACES) {
             Block stair = dispenser.getRelative(face);
             if (stair.getType() != Material.POLISHED_BLACKSTONE_STAIRS) {
-                Utils.send(p, "&cThis Nether Forge is missing Polished Blackstone Stairs at "
+                Utils.send(p, "&c该地狱锻造厂缺少磨制黑石楼梯，位于"
                         + stair.getX() + ", " + stair.getY() + ", " + stair.getZ()
                 );
-                Utils.send(p, "&eYou can refer to this guide when building the Nether Forge: " + Strings.FORGE_GUIDE);
+                Utils.send(p, "&e你可以在建造地狱锻造厂时参考这个指南: " + Strings.FORGE_GUIDE);
                 return false;
             }
         }
@@ -273,10 +273,10 @@ public class NetherForgePedestal extends SlimefunItem {
         for (BlockFace face : STAIR_FACES) {
             Block stair = magmaTank.getRelative(face);
             if (stair.getType() != Material.POLISHED_BLACKSTONE_STAIRS) {
-                Utils.send(p, "&cThis Nether Forge is missing Polished Blackstone Stairs at "
+                Utils.send(p, "&c该地狱锻造厂缺少磨制黑石楼梯，位于 "
                         + stair.getX() + ", " + stair.getY() + ", " + stair.getZ()
                 );
-                Utils.send(p, "&eYou can refer to this guide when building the Nether Forge: " + Strings.FORGE_GUIDE);
+                Utils.send(p, "&e你可以在建造地狱锻造厂时参考这个指南: " + Strings.FORGE_GUIDE);
                 return false;
             }
         }
