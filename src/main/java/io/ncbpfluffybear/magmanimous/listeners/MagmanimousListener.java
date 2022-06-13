@@ -85,7 +85,7 @@ public class MagmanimousListener implements Listener {
             Player p = e.getPlayer();
             p.playSound(p.getLocation(), Sound.ITEM_BUCKET_FILL_LAVA, 1F, -10F);
             p.setFireTicks(20 * 60);
-            Utils.send(p, "&cYou have been set on fire");
+            Utils.send(p, "&c您已被点燃");
         }
     }
 
