@@ -51,7 +51,7 @@ public class Magmanimous extends JavaPlugin implements SlimefunAddon {
     @Nullable
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/NCBPFluffyBear/Magmanimous/issues";
+        return "https://github.com/SlimefunGuguProject/Magmanimous/issues";
     }
 
     @Nonnull

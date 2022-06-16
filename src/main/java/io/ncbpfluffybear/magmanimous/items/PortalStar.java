@@ -49,7 +49,7 @@ public class PortalStar extends SimpleSlimefunItem<ItemUseHandler> implements No
                 if (p.isSneaking()) {
                     World.Environment env = e.getPlayer().getWorld().getEnvironment();
                     if (env != World.Environment.NORMAL && env != World.Environment.NETHER) {
-                        Utils.send(p, "&c您无法在此世界设置传送点!");
+                        Utils.send(p, "&c你只能在主世界或下界设置传送点!");
                         return;
                     }
 
@@ -62,15 +62,15 @@ public class PortalStar extends SimpleSlimefunItem<ItemUseHandler> implements No
                     );
                     // Update location in lore
                     List<String> lore = starMeta.getLore();
-                    lore.set(5, ChatColors.color("&e链接至" + l.getBlockX() + ", " + l.getBlockY()
+                    lore.set(5, ChatColors.color("&e已绑定位置: " + l.getBlockX() + ", " + l.getBlockY()
                             + ", " + l.getBlockZ() + " @" + l.getWorld().getName())
                     );
                     starMeta.setLore(lore);
                     star.setItemMeta(starMeta);
 
-                    Utils.send(p, "&a传送点已设置");
+                    Utils.send(p, "&a已绑定传送位置");
                 } else {
-                    Utils.send(p, "&eShift+右击 设置传送点");
+                    Utils.send(p, "&e使用 Shift+右键点击 绑定传送位置");
                 }
             }
         };

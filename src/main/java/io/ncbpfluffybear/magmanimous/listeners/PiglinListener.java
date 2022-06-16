@@ -88,7 +88,7 @@ public class PiglinListener implements Listener {
 
             // Make sure piglin isn't already being converted
             if (piglin.getPersistentDataContainer().getOrDefault(NETHER_MERCHANT, PersistentDataType.BYTE, (byte) 0) == (byte) 1) {
-                Utils.send(p, "&cThis piglin has already been converted into a Nether Merchant");
+                Utils.send(p, "&c该猪灵会在不久后成为下界商人, 不需要再喂养了");
                 return;
             }
 
@@ -114,7 +114,7 @@ public class PiglinListener implements Listener {
                         // Explosion effect (No damage)
                         piglin.getLocation().getWorld().createExplosion(piglin.getLocation(), 0);
                         convertPiglin(piglin);
-                        Utils.send(p, "&aThis piglin has been converted into a Nether Merchant");
+                        Utils.send(p, "&a该猪灵已成为下界商人");
                         cancel();
                     }
 
@@ -202,7 +202,7 @@ public class PiglinListener implements Listener {
         piglin.setIsAbleToHunt(false);
         piglin.setImmuneToZombification(true);
         piglin.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(40d);
-        piglin.setCustomName(ChatColors.color("&4Nether Merchant"));
+        piglin.setCustomName(ChatColors.color("&4下界商人"));
         // Update equipment
         EntityEquipment equipment = piglin.getEquipment();
         equipment.setHelmet(new ItemStack(Material.NETHERITE_HELMET), true);
