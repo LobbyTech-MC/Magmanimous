@@ -44,12 +44,18 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <version>3.3.0</version>
                 <configuration>
+                    <minimizeJar>true</minimizeJar>
+
                     <relocations>
                         <relocation>
                             <pattern>org.bstats</pattern>
-                            <shadedPattern>io.ncbpfluffybear.shaded.bstats</shadedPattern>
+                            <shadedPattern>io.ncbpfluffybear.magmanimous.shaded.bstats</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>net.guizhanss</pattern>
+                            <shadedPattern>io.ncbpfluffybear.magmanimous.shaded.guizhanlib</shadedPattern>
                         </relocation>
                     </relocations>
 
@@ -108,6 +114,13 @@
                     <artifactId>*.MF</artifactId> <!-- Exclude MF Files -->
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>GuizhanLib</artifactId>
+            <version>0.9.7</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

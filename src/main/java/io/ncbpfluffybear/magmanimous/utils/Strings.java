@@ -16,7 +16,7 @@ public class Strings {
     public static final String GADGET = "&6道具";
     public static final String CONSUMABLE = "&a消耗品";
 
-    public static final String WIKI = "https://slimefun-addons-wiki.guizhanss.cn/magmanimous/Guide";
+    public static final String WIKI = "https://slimefun-addons-wiki.guizhanss.cn/magmanimous/";
     public static final String FORGE_GUIDE = "https://slimefun-addons-wiki.guizhanss.cn/magmanimous/Nether-Forge";
 
 }
