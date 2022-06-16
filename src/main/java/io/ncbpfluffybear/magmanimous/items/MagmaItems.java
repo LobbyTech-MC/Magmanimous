@@ -20,24 +20,25 @@ public class MagmaItems {
     public static final SlimefunItemStack MAGMANIMOUS_GUIDE = new SlimefunItemStack(
             "MAGMANIMOUS_GUIDE",
             Material.YELLOW_STAINED_GLASS_PANE,
-            "&6熔岩之息指南书",
-            "&e> 单击此处获取指南的链接"
+            "&6熔岩之息指南",
+            "&e> 点击了解如何游玩熔岩之息"
     );
 
     public static final SlimefunItemStack NETHER_CATALYST = new SlimefunItemStack(
             "NETHER_CATALYST",
             Material.MAGMA_CREAM,
-            "&c地狱催化剂",
-            "&7用于开启 &4地狱锻造厂"
+            "&c下界催化剂",
+            "&7用于启动 &4熔岩锻造厂"
     );
 
     // Nether forge components
     public static final SlimefunItemStack NETHER_FORGE_PEDESTAL = new SlimefunItemStack(
             "NETHER_FORGE_PEDESTAL",
             Material.DISPENSER,
-            "&c地狱锻造厂基座",
-            "&7持有一个物品",
-            "&7并放入 &4地狱锻造厂 &7里",
+            "&c熔岩锻造厂基座",
+            "&7手持一个物品",
+            "&7右键点击放入 &4熔岩锻造厂",
+            "",
             Strings.NETHER_FORGE_COMPONENT
     );
 
@@ -45,9 +46,10 @@ public class MagmaItems {
             "MAGMA_TANK",
             Material.MAGMA_BLOCK,
             "&6岩浆罐",
-            "&7最多储存" + MagmaTank.getMaxStorage() + "岩浆块",
-            "&e> 右击 &7存入一个岩浆块",
-            "&e> Shift+右击 &7存入所有手持岩浆块",
+            "&7最多储存 " + MagmaTank.getMaxStorage() + " 个岩浆块",
+            "",
+            "&e> 右键点击 &7存入一个岩浆块",
+            "&e> Shift+右键点击 &7存入所有手持岩浆块",
             "",
             Strings.NETHER_FORGE_COMPONENT
     );
@@ -97,12 +99,12 @@ public class MagmaItems {
             "PORTAL_STAR",
             Material.NETHER_STAR,
             "&5传送门之星",
-            "&7当玩家进入地狱门时",
-            "&7传送他们至链接的位置",
+            "&7当玩家手持传送门之星",
+            "&7进入下界传送门时, 传送至绑定的位置",
             "",
-            "&e> Shift+右击 &7链接地点",
+            "&e> Shift+右键点击 &7链接地点",
             "",
-            "&c当前没有绑定位置",
+            "&c未绑定位置",
             Strings.GADGET
     );
 
@@ -111,7 +113,7 @@ public class MagmaItems {
             Material.POTION,
             "&6燃烧药剂",
             "&7点燃饮用者一分钟",
-            "&7用于触发岩浆调谐效果",
+            "&7可用于触发岩浆调谐效果",
             "",
             Strings.CONSUMABLE
     );

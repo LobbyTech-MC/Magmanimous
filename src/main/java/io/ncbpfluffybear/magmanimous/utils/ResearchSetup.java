@@ -19,13 +19,13 @@ public class ResearchSetup {
 
     public static void setup() {
 
-        register("nether_catalyst", 5021, "地狱催化剂", 10, MagmaItems.NETHER_CATALYST);
-        register("nether_forge_components", 5022, "地狱锻造厂基座", 30, MagmaItems.MAGMA_TANK, MagmaItems.NETHER_FORGE_PEDESTAL);
-        register("attuned_armor", 5023, "岩浆调谐盔甲", 100,
+        register("nether_catalyst", 5021, "下界催化剂", 10, MagmaItems.NETHER_CATALYST);
+        register("nether_forge_components", 5022, "熔岩锻造厂", 30, MagmaItems.MAGMA_TANK, MagmaItems.NETHER_FORGE_PEDESTAL);
+        register("attuned_armor", 5023, "岩浆调谐套装", 100,
                 MagmaItems.MAGMA_ATTUNED_HELMET, MagmaItems.MAGMA_ATTUNED_CHESTPLATE,
                 MagmaItems.MAGMA_ATTUNED_LEGGINGS, MagmaItems.MAGMA_ATTUNED_BOOTS
         );
-        register("magma_items", 5024, "Magma Items", 30, MagmaItems.PORTAL_STAR, MagmaItems.COMBUSTION_POTION);
+        register("magma_items", 5024, "岩浆物品", 30, MagmaItems.PORTAL_STAR, MagmaItems.COMBUSTION_POTION);
 
     }
 

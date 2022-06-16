@@ -131,7 +131,7 @@ public class NetherForgePedestal extends SlimefunItem {
         ItemStack item = dispenser.getInventory().getItem(0);
 
         if (item == null) {
-            Utils.send(p, "&c首先将一个物品插入基座!");
+            Utils.send(p, "&c首先将一个物品放入基座!");
             return true;
         }
 
@@ -179,7 +179,7 @@ public class NetherForgePedestal extends SlimefunItem {
         }
 
         if (tankVol < cost) {
-            Utils.send(p, "&c附近的岩浆罐有" + tankVol + "个岩浆块，但是反应需要" + cost + "个岩浆块!");
+            Utils.send(p, "&c附近的岩浆罐有" + tankVol + "个岩浆块，但是锻造需要" + cost + "个岩浆块!");
             return true;
         }
 
@@ -244,16 +244,16 @@ public class NetherForgePedestal extends SlimefunItem {
      */
     private boolean checkStructure(Block dispenser, Block magmaTank, Player p) {
         if (dispenser.getLocation().getWorld().getEnvironment() != World.Environment.NETHER) {
-            Utils.send(p, "&c地狱锻造厂仅能在地狱工作!");
+            Utils.send(p, "&c熔岩锻造厂仅能在下界工作!");
             return false;
         }
 
         // Check for Magma Tank
         if (MagmaItems.MAGMA_TANK.getItem() != BlockStorage.check(magmaTank)) {
-            Utils.send(p, "&c地狱锻造厂缺少一个岩浆罐，位于"
+            Utils.send(p, "&c熔岩锻造厂缺少一个岩浆罐，位于"
                     + magmaTank.getX() + ", " + magmaTank.getY() + ", " + magmaTank.getZ()
             );
-            Utils.send(p, "&e你可以在建造地狱锻造厂时参考这个指南: " + Strings.FORGE_GUIDE);
+            Utils.send(p, "&e你可以在建造熔岩锻造厂时参考该指南: " + Strings.FORGE_GUIDE);
             return false;
         }
 
@@ -261,10 +261,10 @@ public class NetherForgePedestal extends SlimefunItem {
         for (BlockFace face : STAIR_FACES) {
             Block stair = dispenser.getRelative(face);
             if (stair.getType() != Material.POLISHED_BLACKSTONE_STAIRS) {
-                Utils.send(p, "&c该地狱锻造厂缺少磨制黑石楼梯，位于"
+                Utils.send(p, "&c该熔岩锻造厂缺少磨制黑石楼梯，位于"
                         + stair.getX() + ", " + stair.getY() + ", " + stair.getZ()
                 );
-                Utils.send(p, "&e你可以在建造地狱锻造厂时参考这个指南: " + Strings.FORGE_GUIDE);
+                Utils.send(p, "&e你可以在建造熔岩锻造厂时参考该指南: " + Strings.FORGE_GUIDE);
                 return false;
             }
         }
@@ -273,10 +273,10 @@ public class NetherForgePedestal extends SlimefunItem {
         for (BlockFace face : STAIR_FACES) {
             Block stair = magmaTank.getRelative(face);
             if (stair.getType() != Material.POLISHED_BLACKSTONE_STAIRS) {
-                Utils.send(p, "&c该地狱锻造厂缺少磨制黑石楼梯，位于 "
+                Utils.send(p, "&c该熔岩锻造厂缺少岩浆罐，位于 "
                         + stair.getX() + ", " + stair.getY() + ", " + stair.getZ()
                 );
-                Utils.send(p, "&e你可以在建造地狱锻造厂时参考这个指南: " + Strings.FORGE_GUIDE);
+                Utils.send(p, "&e你可以在建造熔岩锻造厂时参考该指南: " + Strings.FORGE_GUIDE);
                 return false;
             }
         }

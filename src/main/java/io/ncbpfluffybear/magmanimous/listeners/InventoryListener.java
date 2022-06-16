@@ -28,7 +28,7 @@ public class InventoryListener implements Listener {
         ItemStack item = e.getCurrentItem();
         SlimefunItem guide = SlimefunItem.getByItem(item);
         if (guide != null && guide.isItem(MagmaItems.MAGMANIMOUS_GUIDE)) {
-            Utils.send(e.getWhoClicked(), "&a单击链接查看指南:");
+            Utils.send(e.getWhoClicked(), "&a熔岩之息指南(点击前往):");
             Utils.send(e.getWhoClicked(), "&e" + Strings.WIKI);
             e.setCancelled(true);
         }

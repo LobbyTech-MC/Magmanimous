@@ -10,6 +10,8 @@ import io.ncbpfluffybear.magmanimous.utils.MagmaItemSetup;
 import io.ncbpfluffybear.magmanimous.utils.ResearchSetup;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -40,6 +42,10 @@ public class Magmanimous extends JavaPlugin implements SlimefunAddon {
 
         // Register Research
         ResearchSetup.setup();
+
+        if (getConfig().getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Build")) {
+            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "Magmanimous", "main", false, "zh-CN").start();
+        }
     }
 
     @Nonnull
@@ -51,7 +57,7 @@ public class Magmanimous extends JavaPlugin implements SlimefunAddon {
     @Nullable
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/NCBPFluffyBear/Magmanimous/issues";
+        return "https://github.com/SlimefunGuguProject/Magmanimous/issues";
     }
 
     @Nonnull

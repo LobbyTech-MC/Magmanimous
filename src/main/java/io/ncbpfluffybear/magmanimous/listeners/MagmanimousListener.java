@@ -53,7 +53,7 @@ public class MagmanimousListener implements Listener {
             // Get stored location
             String locStr = star.getItemMeta().getPersistentDataContainer().get(PortalStar.locationKey, PersistentDataType.STRING);
             if (locStr == null) {
-                Utils.send(p, "&cThis Portal Star has not been bound yet!");
+                Utils.send(p, "&c传送门之星未绑定位置!");
                 return;
             }
 
@@ -61,7 +61,7 @@ public class MagmanimousListener implements Listener {
             Location tpLoc = Utils.deserializeLoc(locStr);
             p.teleport(tpLoc);
             p.playSound(p.getLocation(), Sound.BLOCK_PORTAL_TRAVEL, 0.5F, -5F);
-            Utils.send(p, "&aYour portal star has overridden your teleport location");
+            Utils.send(p, "&a传送门之星已把你传送到绑定位置!");
         }
     }
 
@@ -85,7 +85,7 @@ public class MagmanimousListener implements Listener {
             Player p = e.getPlayer();
             p.playSound(p.getLocation(), Sound.ITEM_BUCKET_FILL_LAVA, 1F, -10F);
             p.setFireTicks(20 * 60);
-            Utils.send(p, "&c您已被点燃");
+            Utils.send(p, "&c你已经已被点燃");
         }
     }
 

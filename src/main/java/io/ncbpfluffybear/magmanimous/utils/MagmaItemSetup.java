@@ -29,9 +29,10 @@ public class MagmaItemSetup {
             new NamespacedKey(Magmanimous.getInstance(), "nether_merchant_barter"),
             new CustomItemStack(
                     Material.PIGLIN_SPAWN_EGG,
-                    "&c地狱商人",
-                    "&7与地狱商人进行交易",
-                    "&e请查询熔岩之息指南",
+                    "&c下界商人",
+                    "&7与下界商人进行交易",
+                    "",
+                    "&e查询熔岩之息指南",
                     "&e以获取更多信息"
             ));
 

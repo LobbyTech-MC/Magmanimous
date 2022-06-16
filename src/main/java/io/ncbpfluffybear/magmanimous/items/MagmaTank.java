@@ -57,12 +57,12 @@ public class MagmaTank extends SlimefunItem {
 
                 // Require player to be holding a Magma Block
                 if (item.getType() != Material.MAGMA_BLOCK) {
-                    Utils.send(p, "&e该岩浆罐已存有" + stored + "个&e岩浆块,右击岩浆块可以添加更多");
+                    Utils.send(p, "&e该岩浆罐已存有" + stored + "个&e岩浆块, 手持岩浆块右键点击可以添加更多");
                     return;
                 }
 
                 if (SlimefunItem.getByItem(item) != null) {
-                    Utils.send(p, "&c您无法在此使用粘液科技物品!");
+                    Utils.send(p, "&c无法在此使用粘液科技物品!");
                     return;
                 }
 

@@ -32,10 +32,10 @@ public class NetherForgeRecipe extends SlimefunItem {
             new NamespacedKey(Magmanimous.getInstance(), "nether_forge"),
             new CustomItemStack(
                     Material.POLISHED_BLACKSTONE_WALL,
-                    "&4地狱锻造厂",
-                    "&7在地狱锻造厂中合成该物品",
+                    "&4熔岩锻造配方",
+                    "&7在熔岩锻造厂中合成该物品",
                     "&e请查询熔岩之息指南以获取",
-                    "&e更多关于地狱锻造厂的信息"
+                    "&e更多关于熔岩锻造厂的信息"
             ));
 
     private static final Map<Material, Integer> attunements = new HashMap<>();
