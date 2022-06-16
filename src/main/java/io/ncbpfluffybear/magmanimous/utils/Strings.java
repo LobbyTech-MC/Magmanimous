@@ -12,7 +12,7 @@ public class Strings {
     }
 
     public static final String NETHER_FORGE_COMPONENT = "&4熔岩锻造厂 &7部件";
-    public static final String ATTUNEMENT = "&4熔岩锻造厂 &7物品属性";
+    public static final String ATTUNEMENT = "&4熔岩锻造厂 &7可调谐物品";
     public static final String GADGET = "&6道具";
     public static final String CONSUMABLE = "&a消耗品";
 
