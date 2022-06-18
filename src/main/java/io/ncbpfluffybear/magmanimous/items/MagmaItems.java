@@ -37,7 +37,7 @@ public class MagmaItems {
             Material.DISPENSER,
             "&c熔岩锻造厂基座",
             "&7手持一个物品",
-            "&7右键点击放入 &4熔岩锻造厂",
+            "&7右击放入 &4熔岩锻造厂",
             "",
             Strings.NETHER_FORGE_COMPONENT
     );
@@ -48,8 +48,8 @@ public class MagmaItems {
             "&6岩浆罐",
             "&7最多储存 " + MagmaTank.getMaxStorage() + " 个岩浆块",
             "",
-            "&e> 右键点击 &7存入一个岩浆块",
-            "&e> Shift+右键点击 &7存入所有手持岩浆块",
+            "&e> 右击 &7存入一个岩浆块",
+            "&e> Shift+右击 &7存入所有手持岩浆块",
             "",
             Strings.NETHER_FORGE_COMPONENT
     );
@@ -59,7 +59,7 @@ public class MagmaItems {
             "MAGMA_ATTUNED_HELMET",
             Material.NETHERITE_HELMET,
             "&4岩浆调谐头盔",
-            "&7当穿上全套盔甲时",
+            "&7当玩家穿上全套盔甲时",
             "&7火焰将给予你增益效果",
             "",
             Strings.ATTUNEMENT
@@ -69,7 +69,7 @@ public class MagmaItems {
             "MAGMA_ATTUNED_CHESTPLATE",
             Material.NETHERITE_CHESTPLATE,
             "&4岩浆调谐胸甲",
-            "&7当穿上全套盔甲时",
+            "&7当玩家穿上全套盔甲时",
             "&7火焰将给予你增益效果",
             "",
             Strings.ATTUNEMENT
@@ -79,7 +79,7 @@ public class MagmaItems {
             "MAGMA_ATTUNED_LEGGINGS",
             Material.NETHERITE_LEGGINGS,
             "&4岩浆调谐护腿",
-            "&7当穿上全套盔甲时",
+            "&7当玩家穿上全套盔甲时",
             "&7火焰将给予你增益效果",
             "",
             Strings.ATTUNEMENT
@@ -89,7 +89,7 @@ public class MagmaItems {
             "MAGMA_ATTUNED_BOOTS",
             Material.NETHERITE_BOOTS,
             "&4岩浆调谐靴子",
-            "&7当穿上全套盔甲时",
+            "&7当玩家穿上全套盔甲时",
             "&7火焰将给予你增益效果",
             "",
             Strings.ATTUNEMENT
@@ -102,7 +102,7 @@ public class MagmaItems {
             "&7当玩家手持传送门之星",
             "&7进入下界传送门时, 传送至绑定的位置",
             "",
-            "&e> Shift+右键点击 &7链接地点",
+            "&e> Shift+右击 &7绑定地点",
             "",
             "&c未绑定位置",
             Strings.GADGET
